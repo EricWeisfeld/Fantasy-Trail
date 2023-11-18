@@ -24,7 +24,12 @@ public partial class Party : Node
         BiomeHandler = GetNodeOrNull<BiomeHandler>(BiomeHandlerPath);
         //testHero = GetNodeOrNull<TestHero>(testHeroPath);
         //testStaminaTracker = GetNodeOrNull<Label>(testStaminaTrackerPath);
-        testStaminaTracker = GetNodeOrNull<Label>("Party/Hero1/TestHeroStamina");
+        Godot.Collections.Array<Node> children = GetChildren();
+        for(int x = 0; x < children.Count; x ++ ){
+            if(children[x].Name.Equals("TestHeroStamina")){
+                testStaminaTracker = children[x] as Label;
+            }
+        }
         testStaminaTracker.Text = "Hero1 Stamina: " + Hero1.Stamina;
         distanceTracker = GetNodeOrNull<Label>(distanceTrackerPath);
         timer = new Timer();
