@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cg6vaiqgcb7ow"]
 
-[ext_resource type="Texture2D" uid="uid://d2vt30lcomfvl" path="res://icon.svg" id="1_vrsns"]
+[ext_resource type="Texture2D" uid="uid://d2vt30lcomfvl" path="res://Resources/icon.svg" id="1_wbdxv"]
 [ext_resource type="Script" path="res://Scripts/StartScript.cs" id="2_w1xfo"]
 
 [node name="Node2D" type="Node2D"]
@@ -17,6 +17,6 @@ offset_left = 385.0
 offset_top = 167.0
 offset_right = 521.0
 offset_bottom = 303.0
-icon = ExtResource("1_vrsns")
+icon = ExtResource("1_wbdxv")
 script = ExtResource("2_w1xfo")
 LabelPath = NodePath("../Label")

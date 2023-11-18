@@ -1,3 +1,63 @@
-[gd_scene format=3 uid="uid://dv3mtllh3oypj"]
+[gd_scene load_steps=5 format=3 uid="uid://gx6rki26rnmh"]
+
+[ext_resource type="Script" path="res://Scripts/Party.cs" id="1_qc470"]
+[ext_resource type="Script" path="res://Scripts/StartWalking.cs" id="4_7bbvo"]
+[ext_resource type="Script" path="res://Scripts/BiomeHandler.cs" id="6_icdxj"]
+[ext_resource type="Script" path="res://Scripts/EventHandler.cs" id="7_ldvoo"]
 
 [node name="Travel Scene" type="Node2D"]
+
+[node name="Party" type="Node" parent="."]
+script = ExtResource("1_qc470")
+testHeroPath = NodePath("")
+distanceTrackerPath = NodePath("../DistanceTracker")
+testStaminaTrackerPath = NodePath("TestHero/TestHero Stamina")
+BiomeHandlerPath = NodePath("../Biome")
+
+[node name="WalkingButton" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 11.0
+offset_right = 135.0
+offset_bottom = 42.0
+text = "Start walking"
+script = ExtResource("4_7bbvo")
+partyPath = NodePath("../Party")
+
+[node name="Biome" type="Node" parent="."]
+script = ExtResource("6_icdxj")
+EventTextPath = NodePath("../Event Text")
+
+[node name="DistanceTracker" type="Label" parent="."]
+offset_left = 266.0
+offset_top = 16.0
+offset_right = 394.0
+offset_bottom = 60.0
+text = "Distance: 0"
+
+[node name="Event Text" type="Label" parent="."]
+offset_left = 444.0
+offset_top = 59.0
+offset_right = 628.0
+offset_bottom = 132.0
+script = ExtResource("7_ldvoo")
+
+[node name="TimeTracker" type="Label" parent="."]
+offset_left = 151.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 39.0
+text = "9 AM"
+
+[node name="FoodTracker" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 12.0
+offset_right = 538.0
+offset_bottom = 41.0
+text = "7 days of supplies"
+
+[node name="DateTracker" type="Label" parent="."]
+offset_left = 555.0
+offset_top = 16.0
+offset_right = 632.0
+offset_bottom = 39.0
+text = "Day 1"
