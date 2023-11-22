@@ -22,10 +22,11 @@ public partial class BiomeHandler : Node
     }
 
     public void EventPicker(){
-        int eventNum = 1;
+        int eventNum = 2;
         int numOfButtons = 0;
         string eventDescription = "";
         string eventButton1 = "";
+        string eventButton2 = "";
         switch(eventNum)
         {
             case 1:
@@ -35,6 +36,10 @@ public partial class BiomeHandler : Node
                 numOfButtons = 1;
                 break;
             case 2:
+                eventDescription = "As you are walking, you come across a river. How do you cross it?";
+                eventButton1 = "Swim the river";
+                eventButton2 = "Knock over a tree";
+                numOfButtons = 2;
                 break;
         }
 

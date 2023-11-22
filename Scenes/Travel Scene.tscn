@@ -9,10 +9,9 @@
 
 [node name="Party" type="Node" parent="."]
 script = ExtResource("1_qc470")
-testHeroPath = NodePath("")
 distanceTrackerPath = NodePath("../DistanceTracker")
-testStaminaTrackerPath = NodePath("TestHero/TestHero Stamina")
 BiomeHandlerPath = NodePath("../Biome")
+timeTrackerPath = NodePath("../TimeTracker")
 
 [node name="WalkingButton" type="Button" parent="."]
 offset_left = 25.0

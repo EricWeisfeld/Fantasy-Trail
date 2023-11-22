@@ -6,6 +6,9 @@ public partial class TestHero : CharacterBody2D
     // Called when the node enters the scene tree for the first time.
     public bool walking;
     public int Stamina = 50;
+    public int Athlethics = 10;
+    public int HP = 100;
+    public int Speed = 10;
     [Export] private AnimatedSprite2D _animatedSprite;
     public override void _Ready()
     {

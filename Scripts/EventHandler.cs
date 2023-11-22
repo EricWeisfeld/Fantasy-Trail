@@ -22,4 +22,13 @@ public partial class EventHandler : Label
             AddChild(button1);
         }
     }
+
+    public void GenerateEvent(string eventText, int numOfButtons, string Button1Text, string Button2Text){
+        Text = eventText;
+        for(int i = 0; i < numOfButtons; i++){
+            var button1 = new Button();
+            button1.Text = Button1Text;
+            AddChild(button1);
+        }
+    }
 }
