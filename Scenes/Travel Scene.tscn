@@ -7,11 +7,12 @@
 
 [node name="Travel Scene" type="Node2D"]
 
-[node name="Party" type="Node" parent="."]
+[node name="Party" type="Node" parent="." node_paths=PackedStringArray("startWalking")]
 script = ExtResource("1_qc470")
 distanceTrackerPath = NodePath("../DistanceTracker")
 BiomeHandlerPath = NodePath("../Biome")
 timeTrackerPath = NodePath("../TimeTracker")
+startWalking = NodePath("../WalkingButton")
 
 [node name="WalkingButton" type="Button" parent="."]
 offset_left = 25.0
@@ -39,6 +40,7 @@ offset_top = 59.0
 offset_right = 628.0
 offset_bottom = 132.0
 script = ExtResource("7_ldvoo")
+partyPath = NodePath("../Party")
 
 [node name="TimeTracker" type="Label" parent="."]
 offset_left = 151.0

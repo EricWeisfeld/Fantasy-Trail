@@ -11,7 +11,7 @@ public partial class StartWalking : Button
 	public override void _Ready()
 	{
 		party = GetNodeOrNull<Party>(partyPath);
-		Pressed += changeText;
+		Pressed += toggleWalk;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,13 +19,11 @@ public partial class StartWalking : Button
 	{
 	}
 
-	public void changeText(){
+	public void toggleWalk(){
 		if(Text == "Start walking"){
-	    	Text = "Stop walking";
 			party.ToggleTraveling(true);
 		}
 		else if(Text == "Stop walking"){
-	    	Text = "Start walking";
 			party.ToggleTraveling(false);
 		}
 

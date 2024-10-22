@@ -9,7 +9,7 @@ public partial class StartScript : Button
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Pressed += changeText;
+		Pressed += () => changeText(1);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,8 +17,8 @@ public partial class StartScript : Button
 	{
 	}
 
-	public void changeText(){
+	public void changeText(int x){
 		myLabel = GetNodeOrNull<Label>(LabelPath);
-		myLabel.Text = "We did it";
+		myLabel.Text = "We did it" + x;
 	}
 }
